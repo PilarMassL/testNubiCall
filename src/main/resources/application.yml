@@ -1,0 +1,16 @@
+# Server
+server:
+  port: 8081
+  contextPath: /nubicall-users
+
+# DB Connection
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/nubicall
+    username: postgres
+    password: 123456
