@@ -1,21 +1,21 @@
-#Test Nubicall
+# Test Nubicall
 
-##Quick Started
+## Quick Started
 
-###Prerequisites
+### Prerequisites
 
-###Software
+### Software
 
 - Postgresql
 - Maven 3.0
 - Java 1.8
 
-###Database installation
+### Database installation
 
 - Create a database called nubicall
 - Execute Script Scripts/1-Nubicall-user-table.sql
 
-###Application Configuration
+### Application Configuration
 
 - Open file src / main / resources / application.yml
 - Modify the connection data to the database
