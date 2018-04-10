@@ -23,8 +23,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/").permitAll()
-				// .antMatchers("/api/user/**").permitAll()
+		
+		http.csrf().disable().authorizeRequests()
+		        .antMatchers("/").permitAll()
+		        .antMatchers("/swagger-ui.html").permitAll()
+		        .antMatchers("/webjars/**").permitAll()
+		        .antMatchers("/swagger-resources/**").permitAll()
+		        .antMatchers("/**/api-docs").permitAll()
 				.antMatchers(HttpMethod.POST, "/login").permitAll().anyRequest().authenticated().and()
 				// We filter the api/login requests
 				.addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
