@@ -26,3 +26,6 @@ COMMENT ON COLUMN public.user_nubicall.password IS 'User''s password ';
 COMMENT ON COLUMN public.user_nubicall.phone IS 'User''s Phone';
 COMMENT ON COLUMN public.user_nubicall.userstatus IS 'A status from a user';
 
+INSERT INTO public.user_nubicall(
+            username, firstname, lastname, email, password, phone, userstatus)
+    VALUES ('admin','pilar','mass','pilar.amane@gmail.com','123456','1234567890','Active');
